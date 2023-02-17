@@ -125,7 +125,12 @@ Ensure the Swag Labs standard_user are able to:
 6. Able to see a confirmation page
 
 # Test Cases
-Section where the different test cases of the challenge will be defined.
+User Story 1
+1. Verify if a standar user will be able to login with a valid username and valid password.
+2. Verify if a locked user cannot login with a valid username and an invalid password.
+3. Verify if a problem_user will be able to login with a valid username and valid password.
+4. Verify if a performance_glitch_user will be able to login with a valid username and valid password.
+
 
 # How to Run the Tests
 Section where the necessary instructions to run the tests will be added

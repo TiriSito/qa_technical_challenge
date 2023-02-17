@@ -1,0 +1,28 @@
+{
+  "login": {
+    "standar": {
+      "user": "standard_user",
+      "password": "secret_sauce"
+    },
+    "blocked_user": {
+      "user": "locked_out_user",
+      "password": "secret_sauce"
+    },
+    "problem": {
+      "user": "problem_user",
+      "password": "secret_sauce"
+    },
+    "performance_glitch_user": {
+      "user": "problem_user",
+      "password": "secret_sauce"
+    }
+  },
+  "login_page": {
+    "error_message":"Epic sadface: Sorry, this user has been locked out."
+   },
+  "home_page": {
+   "title":"Products"
+  }
+
+  
+}
