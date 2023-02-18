@@ -19,7 +19,7 @@ class loginPage {
 
   errorLogin() {
     this.elements.errorLoginText().should('be.visible');
-    this.elements.errorLoginText().should('contain.text', testData.home_page.title);
+    this.elements.errorLoginText().contains(testData.loginPage.error_lockedout_user_message);
   }
 
 }
