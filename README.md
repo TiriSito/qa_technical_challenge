@@ -126,7 +126,7 @@ Ensure the Swag Labs standard_user are able to:
 
 # Test Cases
 User Login
-    Test Case ID: TC01 
+    Test Case ID: TC01
     Purpose: Verify if a standar user will be able to login with a valid username and valid password.
     Test Data:
         user standar and password
@@ -135,7 +135,7 @@ User Login
         1.2 Enter user name
         1.3 Enter Password
         1.4 Click login
-        1.5 Check user is in Product Page
+        1.5 Check user is in Products Page
     Status:
         PASS
     
@@ -161,7 +161,7 @@ User Login
         1.2 Enter user name
         1.3 Enter Password
         1.4 Click login
-        1.5  Check user is in Product Page
+        1.5  Check user is in Products Page
     Status:
         PASS
 
@@ -174,7 +174,7 @@ User Login
         1.2 Enter user name
         1.3 Enter Password
         1.4 Click login
-        1.5 Check user is in Product Page
+        1.5 Check user is in Products Page
     Status:
         PASS
 
@@ -201,6 +201,19 @@ Management Products
         1.2 Login standar_user
         1.3 Enter Password
         1.4 Navigate within the product page, and access the product details.
+        1.5 Check that the image, title, description and price are correct. 
+    Status:
+        PASS
+
+    Test Case ID: TC06
+    Purpose: Browse the product page and add product to chart.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Choose a product at random
         1.5 Check that the image, title, description and price are correct. 
     Status:
         PASS
