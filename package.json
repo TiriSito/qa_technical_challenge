@@ -1,0 +1,24 @@
+{
+  "name": "qa_technical_challenge-1",
+  "version": "1.0.0",
+  "description": "FCM technical test",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "npx cypress open --config viewportWidth=1920,viewportHeight=1080",
+    "mobile": "npx cypress open --config viewportWidth=412,viewportHeight=732"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiriSito/qa_technical_challenge.git"
+  },
+  "author": "Ignacio Tirado de Mena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiriSito/qa_technical_challenge/issues"
+  },
+  "homepage": "https://github.com/TiriSito/qa_technical_challenge#readme",
+  "devDependencies": {
+    "chai-sorted": "^0.2.0",
+    "cypress": "^12.5.1"
+  }
+}
