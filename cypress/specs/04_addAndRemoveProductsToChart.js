@@ -15,10 +15,11 @@ describe('04 Add and remove Products to cart', () => {
   });
 
   it('Add product and remove from product details page', () => {
-    productPage.accessDetailAProduct();
-    productDetailsPage.elements.addProductToCart().click();
+    let productRandom = Math.floor(Math.random() * 5);
+    productPage.accessDetailAProduct(productRandom);
+    productDetailsPage.elements.addProductToCart().eq(productRandom).click();
     productPage.elements.cartBadgeText().should('contain.text', '1');
-    productDetailsPage.elements.removeProductToCart().click();
+    productDetailsPage.elements.removeProductToCart().eq(productRandom).click();
  });
 
   after(() => {

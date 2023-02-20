@@ -14,8 +14,9 @@ describe('03 Add Products to cart', () => {
   });
 
   it('Add product from product details page', () => {
-    productPage.accessDetailAProduct();
-    productDetailsPage.elements.addProductToCart().click()
+    let productRandom = Math.floor(Math.random() * 5);
+    productPage.accessDetailAProduct(productRandom);
+    productDetailsPage.elements.addProductToCart().eq(productRandom).click()
     productPage.elements.cartBadgeText().should('contain.text', '1');
 
  });

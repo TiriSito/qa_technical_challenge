@@ -31,8 +31,7 @@ class productPage {
     this.elements.titleText().should('contain.text', testData.productPage.title);
   }
 
-  accessDetailAProduct(){
-    let productRandom = Math.floor(Math.random() * 5);
+  accessDetailAProduct(productRandom){
     cy.get('.inventory_item').eq(productRandom)
     this.elements.titleProductText().eq(productRandom).then(($ele)=>{expect($ele.text()).to.equal(testData.productPage.products[productRandom].name)})
     this.elements.descriptionProductText().eq(productRandom).then(($ele)=>{expect($ele.text()).to.equal(testData.productPage.products[productRandom].description)})
