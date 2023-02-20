@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'n8fc1i',
   e2e: {
     password: process.env.GLOBAL_PASSWORD || process.env.BB_password,
     baseUrl: 'https://www.saucedemo.com/',
@@ -11,5 +12,6 @@ module.exports = defineConfig({
   },
   chromeWebSecurity: false,
   browser: "chrome",
-  chromeBinary: "/usr/bin/google-chrome"
+  chromeBinary: "/usr/bin/google-chrome",
+  watchForFileChanges: false
 });
