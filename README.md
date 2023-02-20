@@ -178,7 +178,99 @@ User Login
     Status:
         PASS
 
+Management Products
+    Test Case ID: TC05
+    Purpose: Browse the product page and view product details.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Choose a product at random
+        1.5 Check that the image, title, description and price are correct. 
+    Status:
+        PASS
+    
+    Test Case ID: TC06
+    Purpose: Browse through the product page and see the detail of all products.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Navigate within the product page, and access the product details.
+        1.5 Check that the image, title, description and price are correct. 
+    Status:
+        PASS
 
+Sort Products
+    Test Case ID:  
+    Purpose: Sort the products by descending alphabetical order
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Check that the title of the first product
+        1.4 Click in de filter option 'Name (Z to A)'
+        1.5 Check that the products have been ordered correctly
+    Status:
+        PASS
+    
+   Test Case ID:  
+    Purpose: Sort the products by ascending alphabetical order
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Check that the title of the first product
+        1.4 Click in de filter option 'Name (A to Z)'
+        1.5 Check that the products have been ordered correctly
+    Status:
+        PASS
+    
+    Test Case ID: 
+    Purpose: Sort by price from highest to lowest
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Check that the price of the first product
+        1.4 Click in de filter option 'Price (high to low)'
+        1.5 Check that the products have been ordered correctly
+    Status:
+        PASS
+
+    Test Case ID: 
+    Purpose: Sort by price from lowest to highest
+    Test Data:
+        user standar and password
+    Steps:
+      1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Check that the price of the first product
+        1.4 Click in de filter option 'Price (low to high)'
+        1.5 Check that the products have been ordered correctly
+    Status:
+        PASS
+
+Reset App
+    Test Case ID: TXX
+    Purpose: Check that if you click on the 'Reset App State' menu option, the changed data are reset to the initial values.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Sort product by Price low-high
+        1.4 Click menu option 'Reset App State'
+        1.5 Check that the product order has been reset.
+    Status:
+        PASS
 
 
 # How to Run the Tests
@@ -186,6 +278,8 @@ User Login
 
 # Git Commands
 git checkout "branch_name"
+
+git add .
 git commit -m "Modifications to be uploaded"
 git push 
 

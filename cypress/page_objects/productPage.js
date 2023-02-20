@@ -10,6 +10,7 @@ class productPage {
     aboutMenuOptions: () => cy.get('[id="about_sidebar_link"]'),
     logoutMenuOptions: () => cy.get('[id="logout_sidebar_link"]'),
     resetAppStateMenuOptions: () => cy.get('[id="reset_sidebar_link"]'),
+    closeMenuButton: () => cy.get('[id="react-burger-cross-btn"]'),
     titleText: () => cy.get('.title'),
     filterSelect:() => cy.get('[data-test="product_sort_container"]'),
     optionOrderByNameAtoZ:() => cy.get('[value="az"]'),
@@ -18,7 +19,10 @@ class productPage {
     optionOrderByPriceHighToLow:() => cy.get('[value="hilo"]'),
     addArticleButton:() => cy.get('[data-test="add-to-cart-sauce-labs-backpack"]'),
     removeArticleButton:() => cy.get('[data-test="remove-sauce-labs-backpack"]'),
-    imageProducts:() => cy.get('[id="item_4_img_link"]'),
+    titleProductText:() => cy.get('.inventory_item_name'),
+    descriptionProductText: () => cy.get('.inventory_item_desc'),
+    priceProductText: () => cy.get('.inventory_item_price'),
+    imageProductText:() => cy.get('.inventory_item_img > a > img'),
     cartButton: () => cy.get('.shopping_cart_link'),
     cartBadgeText:() => cy.get('.shopping_cart_badge')
   }
@@ -28,19 +32,21 @@ class productPage {
   }
 
   accessDetailAProduct(){
-    let index = Math.floor(Math.random() * 5);
-    cy.get(`[id="item_${index}_img_link"]`).click();
+    let productRandom = Math.floor(Math.random() * 5);
+    cy.get('.inventory_item').eq(productRandom)
+    this.elements.titleProductText().eq(productRandom).then(($ele)=>{expect($ele.text()).to.equal(testData.productPage.products[productRandom].name)})
+    this.elements.descriptionProductText().eq(productRandom).then(($ele)=>{expect($ele.text()).to.equal(testData.productPage.products[productRandom].description)})
+    this.elements.priceProductText().eq(productRandom).then(($ele)=>{expect($ele.text()).to.equal(testData.productPage.products[productRandom].price)})
+    this.elements.imageProductText().eq(productRandom).should('have.attr', 'alt', testData.productPage.products[productRandom].name )
   }
 
   accessDetailAllProducts(){
-    const productos = '[id*="_img_link"]';
-    if (productos.length >= 0){   
-      cy.get(productos).each((productos,index) =>{
-        cy.get(`[id="item_${index}_img_link"]`).click();
-        productDetailsPage.checkDataProduct(index);
-        productDetailsPage.elements.backButton().click();
-      })
-    }
+    cy.get('.inventory_item').each((productos,index) =>{
+      cy.get(`[id="item_${index}_img_link"]`).click();
+      productDetailsPage.checkDataProduct(index);
+      productDetailsPage.elements.backButton().click();
+    })
+
   }
 
  addAllProductsToCart(){
@@ -73,6 +79,21 @@ class productPage {
         expect(productList[productList.length-1]).to.equal(testData.productPage.productsOrder[order].last)
       })
   }
+
+  resetApp(){
+    cy.get('.inventory_item_price').eq(0).should('contain.text', testData.productPage.productsOrder.lohi.first)
+    this.elements.menuButton().click()
+    this.elements.resetAppStateMenuOptions().click()
+    this.elements.closeMenuButton().click()
+    cy.reload()
+    cy.get('.inventory_item_name').eq(0).should('contain.text', testData.productPage.productsOrder.az.first)
+  }
+
+  checkProductNumberCart(){
+    this.elements.cartBadgeText().then(($ele)=>{cy.log($ele.text())})
+  }
+
+
 }
 
 export default new productPage();

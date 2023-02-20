@@ -12,7 +12,7 @@ describe('02 Obtain product details', () => {
     productPage.accessDetailAProduct()
   });
 
-  it('Browse through the product page and see the detail of all products.', () => {
+ it('Browse through the product page and see the detail of all products.', () => {
      productPage.accessDetailAllProducts()
   });
 
