@@ -1,4 +1,4 @@
-name: FCM Technical Challenge
+name: FCM Technical Challenge - Cypress Test
 on: [push]
 jobs:
  cypress-run: 
