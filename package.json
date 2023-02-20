@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/TiriSito/qa_technical_challenge#readme",
   "devDependencies": {
+    "chai-sorted": "^0.2.0",
     "cypress": "^12.5.1"
   }
 }

@@ -125,18 +125,69 @@ Ensure the Swag Labs standard_user are able to:
 6. Able to see a confirmation page
 
 # Test Cases
-User Story 1
-1. Verify if a standar user will be able to login with a valid username and valid password.
-2. Verify if a locked user cannot login with a locked username and an valid password.
-3. Verify if a problem_user will be able to login with a valid username and valid password.
-4. Verify if a performance_glitch_user will be able to login with a valid username and valid password.
+User Login
+    Test Case ID: TC01 
+    Purpose: Verify if a standar user will be able to login with a valid username and valid password.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Enter user name
+        1.3 Enter Password
+        1.4 Click login
+        1.5 Check user is in Product Page
+    Status:
+        PASS
+    
+    Test Case ID: TC02 
+    Purpose: Verify if a locked user cannot login with a locked username and an valid password.
+    Test Data:
+        username locked and password
+    Steps:
+        1.1 Run the website 
+        1.2 Enter user name
+        1.3 Enter Password
+        1.4 Click login
+        1.5 An error message appears, due to blocked user
+    Status:
+        PASS
+    
+    Test Case ID: TC03
+    Purpose: Verify if a problem_user will be able to login with a valid username and valid password.
+    Test Data:
+        problem user and password
+    Steps:
+        1.1 Run the website 
+        1.2 Enter user name
+        1.3 Enter Password
+        1.4 Click login
+        1.5  Check user is in Product Page
+    Status:
+        PASS
+
+    Test Case ID: TC04
+    Purpose: erify if a performance_glitch_user will be able to login with a valid username and valid password.
+    Test Data:
+        performance user and password
+    Steps:
+        1.1 Run the website 
+        1.2 Enter user name
+        1.3 Enter Password
+        1.4 Click login
+        1.5 Check user is in Product Page
+    Status:
+        PASS
+
+
 
 
 # How to Run the Tests
-Section where the necessary instructions to run the tests will be added
+
 
 # Git Commands
-Section to add the git commands used during the challenge
+git checkout "branch_name"
+git commit -m "Modifications to be uploaded"
+git push 
 
 # Problems
 Section to write down problems you have encountered during the challenge

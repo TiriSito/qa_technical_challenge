@@ -23,7 +23,29 @@
    },
   "productPage": {
    "title":"Products",
-   "cart_products": "1"
+   "cart_products": "1",
+   "productsOrder":{
+      "az":{
+        "option":"Name (A to Z)",
+        "first":"Sauce Labs Backpack",
+        "last": "Test.allTheThings() T-Shirt (Red)"
+      },
+      "za":{
+        "option":"Name (Z to A)",
+        "first":"Test.allTheThings() T-Shirt (Red)",
+        "last":"Sauce Labs Backpack"
+      },
+      "lohi":{
+        "option":"Price (low to high)",
+        "first":"$7.99",
+        "last":"$49.99"
+      },
+      "hilo":{
+        "option":"Price (high to low)",
+        "first":"$49.99",
+        "last":"$7.99"
+      }
+    }
   },
   "productDetailsPage": {
     "products":{

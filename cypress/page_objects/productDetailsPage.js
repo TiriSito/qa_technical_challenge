@@ -7,7 +7,7 @@ class productDetailsPage {
     descriptionProductText:() => cy.get('.inventory_details_desc'),
     priceProductText:() => cy.get('.inventory_details_price'),
     addProductToCart:() => cy.get('.btn_inventory'),
-    removeProductToCart:() => cy.get('[data-test="remove-sauce-labs-bike-light"]'),
+    removeProductToCart:() => cy.get('.btn_inventory"'),
     backButton:() => cy.get('[data-test="back-to-products"]'),
   }
 
