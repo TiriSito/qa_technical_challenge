@@ -9,7 +9,7 @@ describe('06 Reset App', () => {
     loginPage.performLogin('standar');
   });
   it('Check that if changes are made in the portal, and reset in the menu, the changes are deleted. ', () => {
-     productPage.sortProducts('lohi','.inventory_item_price');
+     productPage.sortProducts('hilo','.inventory_item_price');
      productPage.resetApp();
      productPage.addAllProductsToCart();
      productPage.checkProductNumberCart();
