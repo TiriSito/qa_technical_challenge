@@ -9,7 +9,8 @@ describe('02 Obtain product details', () => {
   });
 
   it('Browse  through the product page and see the detail of a product.', () => {
-    productPage.accessDetailAProduct()
+    let productRandom = Math.floor(Math.random() * 5);
+    productPage.accessDetailAProduct(productRandom)
   });
 
  it('Browse through the product page and see the detail of all products.', () => {
