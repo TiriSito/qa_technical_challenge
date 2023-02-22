@@ -1,5 +1,5 @@
 import testData from '../fixtures/testData.json';
-import productDetailsPage from './productDetailsPage';
+import productPage from './productPage';
 
 class cartPage {
   elements = {
@@ -7,6 +7,7 @@ class cartPage {
     titleProductText:() => cy.get('.inventory_item_name'),
     descriptionProductText:() => cy.get('.inventory_item_desc'),
     priceProductText:() => cy.get('.inventory_item_price'),
+    removeButton:() => cy.get('.cart_button'),
     continueShoppingButton:() => cy.get('[data-test="continue-shopping"]'),
     checkoutButton:() => cy.get('[data-test="checkout"]'),
   }
@@ -18,6 +19,11 @@ class cartPage {
       this.elements.descriptionProductText().should('contain.text',testData.cartPage.products[index].description);
       this.elements.priceProductText().should('contain.text',testData.cartPage.products[index].price);
     })
+  }
+
+  removeProductCart(){
+    productPage.elements.cartButton().click();
+    this.elements.removeButton().click();
   }
 
 }

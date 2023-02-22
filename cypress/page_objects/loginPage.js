@@ -1,6 +1,5 @@
 import testData from '../fixtures/testData.json';
 
-
 class loginPage {
   elements = {        
     userNameLoginField: () => cy.get('[data-test="username"]'),
