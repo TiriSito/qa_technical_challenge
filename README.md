@@ -125,7 +125,9 @@ Ensure the Swag Labs standard_user are able to:
 6. Able to see a confirmation page
 
 # Test Cases
+
 User Login
+    
     Test Case ID: TC01
     Purpose: Verify if a standar user will be able to login with a valid username and valid password.
     Test Data:
@@ -166,7 +168,7 @@ User Login
         PASS
 
     Test Case ID: TC04
-    Purpose: erify if a performance_glitch_user will be able to login with a valid username and valid password.
+    Purpose: Verify if a performance_glitch_user will be able to login with a valid username and valid password.
     Test Data:
         performance user and password
     Steps:
@@ -204,9 +206,22 @@ Management Products
         1.5 Check that the image, title, description and price are correct. 
     Status:
         PASS
-
-    Test Case ID: TC06
-    Purpose: Browse the product page and add product to chart.
+        
+    Test Case ID: TC07
+    Purpose: Add all products to chart from product page.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Add all products to cart
+        1.5 Check number products in cart
+    Status:
+        PASS
+        
+    Test Case ID: TC08
+    Purpose: Add product to chart from product details page.
     Test Data:
         user standar and password
     Steps:
@@ -214,12 +229,48 @@ Management Products
         1.2 Login standar_user
         1.3 Enter Password
         1.4 Choose a product at random
-        1.5 Check that the image, title, description and price are correct. 
+        1.5 Add product to cart
+        1.6 Check number products in cart
+    Status:
+        PASS
+       
+    Test Case ID: TC09
+    Purpose: Add products to chart from the different pages; Products, Products Details and Cart, checking that the cart is updated with the number of products.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Add all products to cart
+        1.5 Check number products in cart
+        1.6 Access the details of an added product
+        1.7 Remove product
+        1.8 Check number products in cart
+        1.9 Access cart Page
+        1.10 Check number products in cart
+    Status:
+        PASS
+    
+    Test Case ID: TC10
+    Purpose: Add and remove products, from the pages; products, products details and cart.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Enter Password
+        1.4 Add all products to cart
+        1.5 Remove all product
+        1.6 Choose a product at random
+        1.7 Add product to cart
+        1.8 Remove product
+     
     Status:
         PASS
 
-Sort Products
-    Test Case ID:  
+ Sort Products
+    Test Case ID: TC11  
     Purpose: Sort the products by descending alphabetical order
     Test Data:
         user standar and password
@@ -232,7 +283,7 @@ Sort Products
     Status:
         PASS
     
-   Test Case ID:  
+   Test Case ID: TC12
     Purpose: Sort the products by ascending alphabetical order
     Test Data:
         user standar and password
@@ -245,7 +296,7 @@ Sort Products
     Status:
         PASS
     
-    Test Case ID: 
+    Test Case ID: TC13
     Purpose: Sort by price from highest to lowest
     Test Data:
         user standar and password
@@ -258,7 +309,7 @@ Sort Products
     Status:
         PASS
 
-    Test Case ID: 
+    Test Case ID: TC14
     Purpose: Sort by price from lowest to highest
     Test Data:
         user standar and password
@@ -272,7 +323,7 @@ Sort Products
         PASS
 
 Reset App
-    Test Case ID: TXX
+    Test Case ID: TC15
     Purpose: Check that if you click on the 'Reset App State' menu option, the changed data are reset to the initial values.
     Test Data:
         user standar and password
@@ -282,6 +333,23 @@ Reset App
         1.3 Sort product by Price low-high
         1.4 Click menu option 'Reset App State'
         1.5 Check that the product order has been reset.
+    Status:
+        PASS
+ 
+Buy products
+    Test Case ID: TC16
+    Purpose: Make a purchase, from a list of products.
+    Test Data:
+        user standar and password
+    Steps:
+        1.1 Run the website 
+        1.2 Login standar_user
+        1.3 Add all products to cart
+        1.4 Access cart page
+        1.5 Check that; title, description and price are correct. 
+        1.6 Add personal information to buy
+        1.7 Check that the purchase data are correct; qty, name, description, unit price, payment information, shipping information, item total price, tax, total price
+        1.8 Check that the purchase has been made correctly
     Status:
         PASS
 
