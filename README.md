@@ -269,7 +269,7 @@ Management Products
     Status:
         PASS
 
-Sort Products
+ Sort Products
     Test Case ID: TC11  
     Purpose: Sort the products by descending alphabetical order
     Test Data:
