@@ -126,6 +126,7 @@ Ensure the Swag Labs standard_user are able to:
 
 # Test Cases
 User Login
+    
     Test Case ID: TC01
     Purpose: Verify if a standar user will be able to login with a valid username and valid password.
     Test Data:
