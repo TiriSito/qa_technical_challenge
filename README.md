@@ -125,8 +125,7 @@ Ensure the Swag Labs standard_user are able to:
 6. Able to see a confirmation page
 
 # Test Cases
-
-User Login
+# Login
     
     Test Case ID: TC01
     Purpose: Verify if a standar user will be able to login with a valid username and valid password.
@@ -180,7 +179,8 @@ User Login
     Status:
         PASS
 
-Management Products
+# Management Products
+
     Test Case ID: TC05
     Purpose: Browse the product page and view product details.
     Test Data:
@@ -269,7 +269,8 @@ Management Products
     Status:
         PASS
 
- Sort Products
+# Sort Products
+
     Test Case ID: TC11  
     Purpose: Sort the products by descending alphabetical order
     Test Data:
@@ -283,31 +284,31 @@ Management Products
     Status:
         PASS
     
-   Test Case ID: TC12
+    Test Case ID: TC12
     Purpose: Sort the products by ascending alphabetical order
     Test Data:
         user standar and password
     Steps:
-        1.1 Run the website 
-        1.2 Login standar_user
-        1.3 Check that the title of the first product
-        1.4 Click in de filter option 'Name (A to Z)'
-        1.5 Check that the products have been ordered correctly
+         1.1 Run the website 
+         1.2 Login standar_user
+         1.3 Check that the title of the first product
+         1.4 Click in de filter option 'Name (A to Z)'
+         1.5 Check that the products have been ordered correctly
     Status:
-        PASS
-    
+         PASS
+
     Test Case ID: TC13
     Purpose: Sort by price from highest to lowest
     Test Data:
         user standar and password
     Steps:
-        1.1 Run the website 
-        1.2 Login standar_user
-        1.3 Check that the price of the first product
-        1.4 Click in de filter option 'Price (high to low)'
-        1.5 Check that the products have been ordered correctly
+         1.1 Run the website 
+         1.2 Login standar_user
+         1.3 Check that the title of the first product
+         1.4 Click in de filter option 'Price (high to low)'
+         1.5 Check that the products have been ordered correctly
     Status:
-        PASS
+         PASS
 
     Test Case ID: TC14
     Purpose: Sort by price from lowest to highest
@@ -322,7 +323,8 @@ Management Products
     Status:
         PASS
 
-Reset App
+# Reset App
+
     Test Case ID: TC15
     Purpose: Check that if you click on the 'Reset App State' menu option, the changed data are reset to the initial values.
     Test Data:
@@ -336,7 +338,8 @@ Reset App
     Status:
         PASS
  
-Buy products
+# Buy products
+
     Test Case ID: TC16
     Purpose: Make a purchase, from a list of products.
     Test Data:
@@ -352,7 +355,6 @@ Buy products
         1.8 Check that the purchase has been made correctly
     Status:
         PASS
-
 
 # How to Run the Tests
 
