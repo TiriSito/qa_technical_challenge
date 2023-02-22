@@ -357,7 +357,8 @@ Ensure the Swag Labs standard_user are able to:
         PASS
 
 # How to Run the Tests
-
+Open terminal in the IDE and type the command:
+npm run cypress  
 
 # Git Commands
 git checkout "branch_name"
