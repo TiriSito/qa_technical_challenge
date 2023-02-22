@@ -7,7 +7,10 @@ class helpers {
     cy.visit(Cypress.config().baseUrl);
   }
 
-
+  productRandom(){
+    let productRandom = Math.floor(Math.random() * 5);
+    return productRandom;
+  }
 }
 
 export default new helpers();

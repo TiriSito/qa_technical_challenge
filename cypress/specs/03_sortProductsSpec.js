@@ -3,21 +3,21 @@ import loginPage from '../page_objects/loginPage';
 import productPage from '../page_objects/productPage';
 import productDetailsPage from '../page_objects/productDetailsPage';
 
-describe('05 Sort products', () => {
+describe('03 Sort products', () => {
   beforeEach(() => {
     helpers.goToLoginPage();
     loginPage.performLogin('standar');
   });
-  it('Sort by descending alphabetical order', () => {
+  it('TC11 Sort by descending alphabetical order', () => {
     productPage.sortProducts('za','.inventory_item_name');
   });
-  it('Sort by ascending alphabetical order', () => {
+  it('TC12 Sort by ascending alphabetical order', () => {
     productPage.sortProducts('az','.inventory_item_name');
   });
-  it('Sort by price from highest to lowest', () => {
+  it('TC13 Sort by price from highest to lowest', () => {
     productPage.sortProducts('hilo','.inventory_item_price');
   });
-  it('Sort by price from lowest to highest', () => {
+  it('TC14 Sort by price from lowest to highest', () => {
     productPage.sortProducts('lohi','.inventory_item_price');
   });
   after(() => {

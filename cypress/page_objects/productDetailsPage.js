@@ -1,5 +1,4 @@
 import testData from '../fixtures/testData.json';
-import helpers from '../resources/helpers';
 
 class productDetailsPage {
   elements = {
