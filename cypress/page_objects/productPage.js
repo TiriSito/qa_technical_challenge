@@ -54,7 +54,6 @@ class productPage {
     cy.get(`[data-test="add-to-cart-${nameProduct.toLowerCase().replaceAll(' ', '-')}"]`).click();                  
     this.elements.cartBadgeText().should('contain.text', index+1);
     this.elements.cartButton().click();
-    cartPage.checkShoppingProducts(index)
     cartPage.elements.continueShoppingButton().click()
   })
  }
@@ -88,8 +87,9 @@ class productPage {
     cy.get('.inventory_item_name').eq(0).should('contain.text', testData.productPage.productsOrder.az.first)
   }
 
-  checkProductNumberCart(){
-    this.elements.cartBadgeText().then(($ele)=>{cy.log($ele.text())})
+  checkProductNumberCart(numProductsChart){
+    this.elements.cartBadgeText()
+    .then(()=>{this.elements.cartBadgeText().should('contain.text', numProductsChart);})
   }
 
 

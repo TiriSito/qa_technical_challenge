@@ -9,7 +9,7 @@ describe('03 Add Products to cart', () => {
     loginPage.performLogin('standar');
   });
 
-  it('Add all products from product page', () => {
+ it('Add all products from product page', () => {
      productPage.addAllProductsToCart();
   });
 
@@ -18,10 +18,19 @@ describe('03 Add Products to cart', () => {
     productPage.accessDetailAProduct(productRandom);
     productDetailsPage.elements.addProductToCart().eq(productRandom).click()
     productPage.elements.cartBadgeText().should('contain.text', '1');
-
  });
 
-  after(() => {
+ it('Add products from the different pages; Products Page, Products Details page and Cart Page, checking that the cart is updated with the number of products.', () => {
+  let productRandom = Math.floor(Math.random() * 5);
+  productPage.addAllProductsToCart();
+  productPage.accessDetailAProduct(productRandom);
+  productDetailsPage.elements.removeProductToCart().eq(productRandom).click()
+  productPage.checkProductNumberCart('5');
+  productPage.elements.cartButton().click() ;
+  productPage.checkProductNumberCart('5');
+});
+
+after(() => {
      productPage.elements.menuButton().click()
      productPage.elements.logoutMenuOptions().click()
   });
